@@ -1,6 +1,5 @@
 import {
     Box,
-    Button,
     CloseButton,
     Container,
     Icon,
@@ -18,9 +17,8 @@ const Header = () => {
     const isMobile = useBreakpointValue({ base: true, md: false })
     return (
         <Box as="section" pb={{ base: '12', md: '24' }} >
-            <Box bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')}>
+            <Box bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')} borderStyle='solid' borderBottomWidth={1} borderColor='gray.100'>
                 <Container maxW='container.xl' py={{ base: '1', md: '2.5' }} position="relative">
-                    <CloseButton display={{ sm: 'none' }} position="absolute" right="0" top="2" />
                     <Stack
                         direction={{ base: 'column', sm: 'row' }}
                         justify="space-between"
@@ -42,18 +40,8 @@ const Header = () => {
                                 pe={{ base: '4', sm: '0' }}
                             >
                                 <Text fontWeight="medium">Design your ui with UiBuiler</Text>
-                                <Text color="muted">Get Your Code</Text>
+                                <Text color="gray.500">Get Your Code</Text>
                             </Stack>
-                        </Stack>
-                        <Stack
-                            direction={{ base: 'column', sm: 'row' }}
-                            spacing={{ base: '3', sm: '2' }}
-                            align={{ base: 'stretch', sm: 'center' }}
-                        >
-                            <Button variant="primary" isFullWidth>
-                                Read more
-                            </Button>
-                            <CloseButton display={{ base: 'none', sm: 'inline-flex' }} />
                         </Stack>
                     </Stack>
                 </Container>
