@@ -16,9 +16,9 @@ import {BiCodeAlt} from 'react-icons/bi';
 const Header = () => {
     const isMobile = useBreakpointValue({ base: true, md: false })
     return (
-        <Box as="section" pb={{ base: '12', md: '24' }} >
+        <Box as="section" pb={{ base: '1', md: '4' }} >
             <Box bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')} borderStyle='solid' borderBottomWidth={1} borderColor='gray.100'>
-                <Container maxW='container.xl' py={{ base: '1', md: '2.5' }} position="relative">
+                <Container maxW='container.xl' py={{ base: '1', md: '1.5' }} position="relative">
                     <Stack
                         direction={{ base: 'column', sm: 'row' }}
                         justify="space-between"
